@@ -1,0 +1,9 @@
+[submodule "src/ippl"]
+	path = src/ippl
+	url = https://github.com/IPPL-framework/ippl.git
+[submodule "src/heffte"]
+	path = src/heffte
+	url = https://github.com/icl-utk-edu/heffte.git
+[submodule "src/ngenic"]
+	path = src/ngenic
+	url = https://github.com/bcrazzolara/SimGadget.git
