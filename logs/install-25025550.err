@@ -1,0 +1,39 @@
+Many modules are hidden in this stack. Use "module --show_hidden spider SOFTWARE" if you are not able to find the required software
+fatal: not a git repository (or any parent up to mount point /cluster/scratch)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+/var/spool/slurm/slurmd/state/job25025550/slurm_script: line 34: cd: /cluster/scratch/ebobrova/cosmology/src/fftw: No such file or directory
+tar (child): fftw-2.1.5.tar.gz: Cannot open: No such file or directory
+tar (child): Error is not recoverable: exiting now
+tar: Child returned status 2
+tar: Error is not recoverable: exiting now
+/var/spool/slurm/slurmd/state/job25025550/slurm_script: line 36: cd: fftw-2.1.5: No such file or directory
+/var/spool/slurm/slurmd/state/job25025550/slurm_script: line 38: ./configure: No such file or directory
+make: *** No targets specified and no makefile found.  Stop.
+make: *** No rule to make target 'install'.  Stop.
+/var/spool/slurm/slurmd/state/job25025550/slurm_script: line 50: cd: /cluster/scratch/ebobrova/cosmology/src/heffte: No such file or directory
+CMake Warning:
+  Ignoring extra path from command line:
+
+   ".."
+
+
+CMake Error: The source directory "/cluster/scratch/ebobrova/cosmology" does not appear to contain CMakeLists.txt.
+Specify --help for usage, or press the help button on the CMake GUI.
+make: *** No targets specified and no makefile found.  Stop.
+make: *** No rule to make target 'install'.  Stop.
+/var/spool/slurm/slurmd/state/job25025550/slurm_script: line 65: cd: /cluster/scratch/ebobrova/cosmology/src/ippl: No such file or directory
+CMake Warning:
+  Ignoring extra path from command line:
+
+   ".."
+
+
+CMake Error: The source directory "/cluster/scratch/ebobrova/cosmology/build" does not appear to contain CMakeLists.txt.
+Specify --help for usage, or press the help button on the CMake GUI.
+make: *** No targets specified and no makefile found.  Stop.
+make: *** No rule to make target 'install'.  Stop.
+/var/spool/slurm/slurmd/state/job25025550/slurm_script: line 91: cd: /cluster/scratch/ebobrova/cosmology/src/ngenic/ngenic: No such file or directory
+sed: can't read Makefile: No such file or directory
+sed: can't read Makefile: No such file or directory
+make: *** No targets specified and no makefile found.  Stop.
+cp: cannot stat 'N-GenIC': No such file or directory
