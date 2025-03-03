@@ -17,17 +17,19 @@ module load gsl/2.7.1
 module load hdf5/1.14.3
 
 # Define paths
-SCRATCH_DIR=$SCRATCH/cosmology
-BUILD_DIR=$HOME/cosmology/build
+SCRATCH_DIR=$SCRATCH/cosmology-app
+BUILD_DIR=$SCRATCH_DIR/build
 SRC_DIR=$SCRATCH_DIR/src
-BIN_DIR=$HOME/cosmology/bin
+BIN_DIR=$SCRATCH_DIR/bin
 LOG_DIR=$SCRATCH_DIR/logs
+IC_DIR=$SCRATCH_DIR/data/ICs
+GADGET_DIR=$SCRATCH_DIR/src/ngenic/gadget2
 
-mkdir -p $BUILD_DIR $SRC_DIR $BIN_DIR $LOG_DIR
+mkdir -p $BUILD_DIR $SRC_DIR $BIN_DIR $LOG_DIR $IC_DIR
 
 # Ensure submodules are initialized (useful if running after cloning)
-cd $SCRATCH_DIR
-git submodule update --init --recursive
+# cd $SCRATCH_DIR
+# git submodule update --init --recursive
 
 # --- Step 1: Install FFTW 2.1.5 (Required for N-GenIC) ---
 FFTW_DIR=$BUILD_DIR/fftw2_install
@@ -88,7 +90,7 @@ echo "IPPL installation with Cosmology completed successfully."
 
 # --- Step 4: Install N-GenIC ---
 NGENIC_INSTALL_DIR=$BUILD_DIR/ngenic_install
-cd $SRC_DIR/ngenic/ngenic
+cd $SRC_DIR/ngenic/ngenic  # Fixing path to correct location
 
 # Modify Makefile for FFTW paths
 sed -i "s|FFTW_INCL=.*|FFTW_INCL=${FFTW_INCL}|" Makefile
@@ -102,4 +104,20 @@ cp N-GenIC $BIN_DIR/
 
 export PATH=$BIN_DIR:$PATH
 
-echo "N-GenIC installation completed successfully!"
+echo "N-GenIC installation completed successfully."
+
+# --- Step 5: Compile Gadget2 (Optional but Needed for Some Simulations) ---
+cd $GADGET_DIR
+
+# Modify Makefile for FFTW paths
+sed -i "s|FFTW_INCL=.*|FFTW_INCL=${FFTW_INCL}|" Makefile
+sed -i "s|FFTW_LIBS=.*|FFTW_LIBS=${FFTW_LIBS}|" Makefile
+
+make -j$(nproc)
+
+# Move Gadget2 binary
+cp Gadget2 $BIN_DIR/
+
+echo "Gadget2 compiled successfully!"
+
+

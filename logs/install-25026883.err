@@ -1,0 +1,287 @@
+Many modules are hidden in this stack. Use "module --show_hidden spider SOFTWARE" if you are not able to find the required software
+In file included from rfftw_f77_mpi.c:20:
+rfftw_f77_mpi.c: In function 'rfftwnd_f77_mpi_create_plan_':
+In file included from fftw_f77_mpi.c:20:
+fftw_f77_mpi.c: In function 'fftw_f77_mpi_create_plan_':
+fftw_f77_mpi.h:50:48: warning: passing argument 1 of 'MPI_Comm_f2c' makes integer from pointer without a cast [-Wint-conversion]
+   50 | #  define FFTW_MPI_COMM_F2C(comm) MPI_Comm_f2c(*((MPI_Comm *) comm))
+      |                                                ^~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                MPI_Comm {aka struct ompi_communicator_t *}
+rfftw_f77_mpi.c:39:35: note: in expansion of macro 'FFTW_MPI_COMM_F2C'
+   39 |      *p = rfftwnd_mpi_create_plan(FFTW_MPI_COMM_F2C(comm),
+      |                                   ^~~~~~~~~~~~~~~~~
+fftw_f77_mpi.h:50:48: warning: passing argument 1 of 'MPI_Comm_f2c' makes integer from pointer without a cast [-Wint-conversion]
+   50 | #  define FFTW_MPI_COMM_F2C(comm) MPI_Comm_f2c(*((MPI_Comm *) comm))
+      |                                                ^~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                MPI_Comm {aka struct ompi_communicator_t *}
+fftw_f77_mpi.c:35:32: note: in expansion of macro 'FFTW_MPI_COMM_F2C'
+   35 |      *p = fftw_mpi_create_plan(FFTW_MPI_COMM_F2C(comm), *n,dir,*flags);
+      |                                ^~~~~~~~~~~~~~~~~
+In file included from fftw_mpi.h:24,
+                 from fftw_f77_mpi.h:23:
+/cluster/software/stacks/2024-06/spack/opt/spack/linux-ubuntu22.04-x86_64_v3/gcc-12.2.0/openmpi-4.1.6-carqrgaphesqd6gv2ei55htn6sxpngvt/include/mpi.h:1413:47: note: expected 'int' but argument is of type 'MPI_Comm' {aka 'struct ompi_communicator_t *'}
+ 1413 | OMPI_DECLSPEC  MPI_Comm MPI_Comm_f2c(MPI_Fint comm);
+      |                                               ^
+rfftw_f77_mpi.c: In function 'rfftw2d_f77_mpi_create_plan_':
+fftw_f77_mpi.h:50:48: warning: passing argument 1 of 'MPI_Comm_f2c' makes integer from pointer without a cast [-Wint-conversion]
+   50 | #  define FFTW_MPI_COMM_F2C(comm) MPI_Comm_f2c(*((MPI_Comm *) comm))
+      |                                                ^~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                MPI_Comm {aka struct ompi_communicator_t *}
+rfftw_f77_mpi.c:49:35: note: in expansion of macro 'FFTW_MPI_COMM_F2C'
+   49 |      *p = rfftw2d_mpi_create_plan(FFTW_MPI_COMM_F2C(comm), *ny,*nx,dir,*flags);
+      |                                   ^~~~~~~~~~~~~~~~~
+/cluster/software/stacks/2024-06/spack/opt/spack/linux-ubuntu22.04-x86_64_v3/gcc-12.2.0/openmpi-4.1.6-carqrgaphesqd6gv2ei55htn6sxpngvt/include/mpi.h:1413:47: note: expected 'int' but argument is of type 'MPI_Comm' {aka 'struct ompi_communicator_t *'}
+ 1413 | OMPI_DECLSPEC  MPI_Comm MPI_Comm_f2c(MPI_Fint comm);
+      |                                               ^
+In file included from fftw_mpi.h:24,
+                 from fftw_f77_mpi.h:23:
+/cluster/software/stacks/2024-06/spack/opt/spack/linux-ubuntu22.04-x86_64_v3/gcc-12.2.0/openmpi-4.1.6-carqrgaphesqd6gv2ei55htn6sxpngvt/include/mpi.h:1413:47: note: expected 'int' but argument is of type 'MPI_Comm' {aka 'struct ompi_communicator_t *'}
+ 1413 | OMPI_DECLSPEC  MPI_Comm MPI_Comm_f2c(MPI_Fint comm);
+      |                                               ^
+rfftw_f77_mpi.c: In function 'rfftw3d_f77_mpi_create_plan_':
+fftw_f77_mpi.h:50:48: warning: passing argument 1 of 'MPI_Comm_f2c' makes integer from pointer without a cast [-Wint-conversion]
+   50 | #  define FFTW_MPI_COMM_F2C(comm) MPI_Comm_f2c(*((MPI_Comm *) comm))
+      |                                                ^~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                MPI_Comm {aka struct ompi_communicator_t *}
+rfftw_f77_mpi.c:58:35: note: in expansion of macro 'FFTW_MPI_COMM_F2C'
+   58 |      *p = rfftw3d_mpi_create_plan(FFTW_MPI_COMM_F2C(comm),
+      |                                   ^~~~~~~~~~~~~~~~~
+/cluster/software/stacks/2024-06/spack/opt/spack/linux-ubuntu22.04-x86_64_v3/gcc-12.2.0/openmpi-4.1.6-carqrgaphesqd6gv2ei55htn6sxpngvt/include/mpi.h:1413:47: note: expected 'int' but argument is of type 'MPI_Comm' {aka 'struct ompi_communicator_t *'}
+ 1413 | OMPI_DECLSPEC  MPI_Comm MPI_Comm_f2c(MPI_Fint comm);
+      |                                               ^
+fftw_f77_mpi.c: In function 'fftwnd_f77_mpi_create_plan_':
+fftw_f77_mpi.h:50:48: warning: passing argument 1 of 'MPI_Comm_f2c' makes integer from pointer without a cast [-Wint-conversion]
+   50 | #  define FFTW_MPI_COMM_F2C(comm) MPI_Comm_f2c(*((MPI_Comm *) comm))
+      |                                                ^~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                MPI_Comm {aka struct ompi_communicator_t *}
+fftw_f77_mpi.c:71:34: note: in expansion of macro 'FFTW_MPI_COMM_F2C'
+   71 |      *p = fftwnd_mpi_create_plan(FFTW_MPI_COMM_F2C(comm),
+      |                                  ^~~~~~~~~~~~~~~~~
+/cluster/software/stacks/2024-06/spack/opt/spack/linux-ubuntu22.04-x86_64_v3/gcc-12.2.0/openmpi-4.1.6-carqrgaphesqd6gv2ei55htn6sxpngvt/include/mpi.h:1413:47: note: expected 'int' but argument is of type 'MPI_Comm' {aka 'struct ompi_communicator_t *'}
+ 1413 | OMPI_DECLSPEC  MPI_Comm MPI_Comm_f2c(MPI_Fint comm);
+      |                                               ^
+fftw_f77_mpi.c: In function 'fftw2d_f77_mpi_create_plan_':
+fftw_f77_mpi.h:50:48: warning: passing argument 1 of 'MPI_Comm_f2c' makes integer from pointer without a cast [-Wint-conversion]
+   50 | #  define FFTW_MPI_COMM_F2C(comm) MPI_Comm_f2c(*((MPI_Comm *) comm))
+      |                                                ^~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                MPI_Comm {aka struct ompi_communicator_t *}
+fftw_f77_mpi.c:81:34: note: in expansion of macro 'FFTW_MPI_COMM_F2C'
+   81 |      *p = fftw2d_mpi_create_plan(FFTW_MPI_COMM_F2C(comm), *ny,*nx,dir,*flags);
+      |                                  ^~~~~~~~~~~~~~~~~
+/cluster/software/stacks/2024-06/spack/opt/spack/linux-ubuntu22.04-x86_64_v3/gcc-12.2.0/openmpi-4.1.6-carqrgaphesqd6gv2ei55htn6sxpngvt/include/mpi.h:1413:47: note: expected 'int' but argument is of type 'MPI_Comm' {aka 'struct ompi_communicator_t *'}
+ 1413 | OMPI_DECLSPEC  MPI_Comm MPI_Comm_f2c(MPI_Fint comm);
+      |                                               ^
+fftw_f77_mpi.c: In function 'fftw3d_f77_mpi_create_plan_':
+fftw_f77_mpi.h:50:48: warning: passing argument 1 of 'MPI_Comm_f2c' makes integer from pointer without a cast [-Wint-conversion]
+   50 | #  define FFTW_MPI_COMM_F2C(comm) MPI_Comm_f2c(*((MPI_Comm *) comm))
+      |                                                ^~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                MPI_Comm {aka struct ompi_communicator_t *}
+fftw_f77_mpi.c:90:34: note: in expansion of macro 'FFTW_MPI_COMM_F2C'
+   90 |      *p = fftw3d_mpi_create_plan(FFTW_MPI_COMM_F2C(comm),
+      |                                  ^~~~~~~~~~~~~~~~~
+/cluster/software/stacks/2024-06/spack/opt/spack/linux-ubuntu22.04-x86_64_v3/gcc-12.2.0/openmpi-4.1.6-carqrgaphesqd6gv2ei55htn6sxpngvt/include/mpi.h:1413:47: note: expected 'int' but argument is of type 'MPI_Comm' {aka 'struct ompi_communicator_t *'}
+ 1413 | OMPI_DECLSPEC  MPI_Comm MPI_Comm_f2c(MPI_Fint comm);
+      |                                               ^
+install-info: warning: no info dir entry in `/cluster/scratch/ebobrova/cosmology-app/build/fftw2_install/info/fftw.info'
+[ 11%] Performing download step (download, verify and extract) for 'kokkos-populate'
+-- File already exists but no hash specified (use URL_HASH):
+  file='/cluster/scratch/ebobrova/cosmology-app/src/ippl/build/_deps/kokkos-subbuild/kokkos-populate-prefix/src/4.1.00.tar.gz'
+Old file will be removed and new file downloaded from URL.
+-- Downloading...
+   dst='/cluster/scratch/ebobrova/cosmology-app/src/ippl/build/_deps/kokkos-subbuild/kokkos-populate-prefix/src/4.1.00.tar.gz'
+   timeout='none'
+   inactivity timeout='none'
+-- Using src='https://github.com/kokkos/kokkos/archive/refs/tags/4.1.00.tar.gz'
+-- Retrying...
+-- Using src='https://github.com/kokkos/kokkos/archive/refs/tags/4.1.00.tar.gz'
+-- Retry after 5 seconds (attempt #2) ...
+-- Using src='https://github.com/kokkos/kokkos/archive/refs/tags/4.1.00.tar.gz'
+-- Retry after 5 seconds (attempt #3) ...
+-- Using src='https://github.com/kokkos/kokkos/archive/refs/tags/4.1.00.tar.gz'
+-- Retry after 15 seconds (attempt #4) ...
+-- Using src='https://github.com/kokkos/kokkos/archive/refs/tags/4.1.00.tar.gz'
+-- Retry after 60 seconds (attempt #5) ...
+-- Using src='https://github.com/kokkos/kokkos/archive/refs/tags/4.1.00.tar.gz'
+CMake Error at kokkos-subbuild/kokkos-populate-prefix/src/kokkos-populate-stamp/download-kokkos-populate.cmake:170 (message):
+  Each download failed!
+
+    error: downloading 'https://github.com/kokkos/kokkos/archive/refs/tags/4.1.00.tar.gz' failed
+          status_code: 7
+          status_string: "Couldn't connect to server"
+          log:
+          --- LOG BEGIN ---
+            Trying 140.82.121.4:443...
+
+  connect to 140.82.121.4 port 443 failed: Connection refused
+
+  Failed to connect to github.com port 443 after 3 ms: Couldn't connect to
+  server
+
+  Closing connection
+
+
+
+          --- LOG END ---
+          error: downloading 'https://github.com/kokkos/kokkos/archive/refs/tags/4.1.00.tar.gz' failed
+          status_code: 7
+          status_string: "Couldn't connect to server"
+          log:
+          --- LOG BEGIN ---
+            Trying 140.82.121.4:443...
+
+  connect to 140.82.121.4 port 443 failed: Connection refused
+
+  Failed to connect to github.com port 443 after 4 ms: Couldn't connect to
+  server
+
+  Closing connection
+
+
+
+          --- LOG END ---
+          error: downloading 'https://github.com/kokkos/kokkos/archive/refs/tags/4.1.00.tar.gz' failed
+          status_code: 7
+          status_string: "Couldn't connect to server"
+          log:
+          --- LOG BEGIN ---
+            Trying 140.82.121.4:443...
+
+  connect to 140.82.121.4 port 443 failed: Connection refused
+
+  Failed to connect to github.com port 443 after 3 ms: Couldn't connect to
+  server
+
+  Closing connection
+
+
+
+          --- LOG END ---
+          error: downloading 'https://github.com/kokkos/kokkos/archive/refs/tags/4.1.00.tar.gz' failed
+          status_code: 7
+          status_string: "Couldn't connect to server"
+          log:
+          --- LOG BEGIN ---
+            Trying 140.82.121.4:443...
+
+  connect to 140.82.121.4 port 443 failed: Connection refused
+
+  Failed to connect to github.com port 443 after 3 ms: Couldn't connect to
+  server
+
+  Closing connection
+
+
+
+          --- LOG END ---
+          error: downloading 'https://github.com/kokkos/kokkos/archive/refs/tags/4.1.00.tar.gz' failed
+          status_code: 7
+          status_string: "Couldn't connect to server"
+          log:
+          --- LOG BEGIN ---
+            Trying 140.82.121.4:443...
+
+  connect to 140.82.121.4 port 443 failed: Connection refused
+
+  Failed to connect to github.com port 443 after 4 ms: Couldn't connect to
+  server
+
+  Closing connection
+
+
+
+          --- LOG END ---
+          error: downloading 'https://github.com/kokkos/kokkos/archive/refs/tags/4.1.00.tar.gz' failed
+          status_code: 7
+          status_string: "Couldn't connect to server"
+          log:
+          --- LOG BEGIN ---
+            Trying 140.82.121.4:443...
+
+  connect to 140.82.121.4 port 443 failed: Connection refused
+
+  Failed to connect to github.com port 443 after 3 ms: Couldn't connect to
+  server
+
+  Closing connection
+
+
+
+          --- LOG END ---
+          
+    
+
+
+gmake[2]: *** [CMakeFiles/kokkos-populate.dir/build.make:100: kokkos-populate-prefix/src/kokkos-populate-stamp/kokkos-populate-download] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/kokkos-populate.dir/all] Error 2
+gmake: *** [Makefile:91: all] Error 2
+
+CMake Error at /cluster/software/stacks/2024-06/spack/opt/spack/linux-ubuntu22.04-x86_64_v3/gcc-12.2.0/cmake-3.27.7-qk5wrxppdzawtjy2ndtushoxqv3kmao4/share/cmake-3.27/Modules/FetchContent.cmake:1662 (message):
+  Build step for kokkos failed: 2
+Call Stack (most recent call first):
+  /cluster/software/stacks/2024-06/spack/opt/spack/linux-ubuntu22.04-x86_64_v3/gcc-12.2.0/cmake-3.27.7-qk5wrxppdzawtjy2ndtushoxqv3kmao4/share/cmake-3.27/Modules/FetchContent.cmake:1802:EVAL:2 (__FetchContent_directPopulate)
+  /cluster/software/stacks/2024-06/spack/opt/spack/linux-ubuntu22.04-x86_64_v3/gcc-12.2.0/cmake-3.27.7-qk5wrxppdzawtjy2ndtushoxqv3kmao4/share/cmake-3.27/Modules/FetchContent.cmake:1802 (cmake_language)
+  /cluster/software/stacks/2024-06/spack/opt/spack/linux-ubuntu22.04-x86_64_v3/gcc-12.2.0/cmake-3.27.7-qk5wrxppdzawtjy2ndtushoxqv3kmao4/share/cmake-3.27/Modules/FetchContent.cmake:2016 (FetchContent_Populate)
+  CMakeLists.txt:114 (FetchContent_MakeAvailable)
+
+
+make: *** No targets specified and no makefile found.  Stop.
+make: *** No rule to make target 'install'.  Stop.
+save.c: In function 'save_local_data':
+save.c:65:34: warning: variable 'shift_dm' set but not used [-Wunused-but-set-variable]
+   65 |   double meanspacing, shift_gas, shift_dm;
+      |                                  ^~~~~~~~
+save.c:65:23: warning: variable 'shift_gas' set but not used [-Wunused-but-set-variable]
+   65 |   double meanspacing, shift_gas, shift_dm;
+      |                       ^~~~~~~~~
+save.c:60:20: warning: variable 'maxidlen' set but not used [-Wunused-but-set-variable]
+   60 |   int blockmaxlen, maxidlen, maxlongidlen;
+      |                    ^~~~~~~~
+save.c:59:14: warning: variable 'blocklongid' set but not used [-Wunused-but-set-variable]
+   59 |   long long *blocklongid;
+      |              ^~~~~~~~~~~
+read_param.c: In function 'read_parameterfile':
+read_param.c:20:9: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+   20 |   char *ret, tag[MAXTAGS][50];
+      |         ^~~
+main.c: In function 'main':
+main.c:62:30: warning: format '%ld' expects argument of type 'long int', but argument 2 has type 'long long int' [-Wformat=]
+   62 |   printf("Tot numb of part %ld \n ", TotNumPart);
+      |                            ~~^       ~~~~~~~~~~
+      |                              |       |
+      |                              |       long long int
+      |                              long int
+      |                            %lld
+/var/spool/slurm/slurmd/state/job25026883/slurm_script: line 110: cd: /cluster/scratch/ebobrova/cosmology-app/src/ngenic/gadget2: No such file or directory
+save.c: In function 'save_local_data':
+save.c:65:34: warning: variable 'shift_dm' set but not used [-Wunused-but-set-variable]
+   65 |   double meanspacing, shift_gas, shift_dm;
+      |                                  ^~~~~~~~
+save.c:65:23: warning: variable 'shift_gas' set but not used [-Wunused-but-set-variable]
+   65 |   double meanspacing, shift_gas, shift_dm;
+      |                       ^~~~~~~~~
+save.c:60:20: warning: variable 'maxidlen' set but not used [-Wunused-but-set-variable]
+   60 |   int blockmaxlen, maxidlen, maxlongidlen;
+      |                    ^~~~~~~~
+save.c:59:14: warning: variable 'blocklongid' set but not used [-Wunused-but-set-variable]
+   59 |   long long *blocklongid;
+      |              ^~~~~~~~~~~
+main.c: In function 'main':
+main.c:62:30: warning: format '%ld' expects argument of type 'long int', but argument 2 has type 'long long int' [-Wformat=]
+   62 |   printf("Tot numb of part %ld \n ", TotNumPart);
+      |                            ~~^       ~~~~~~~~~~
+      |                              |       |
+      |                              |       long long int
+      |                              long int
+      |                            %lld
+read_param.c: In function 'read_parameterfile':
+read_param.c:20:9: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+   20 |   char *ret, tag[MAXTAGS][50];
+      |         ^~~
+cp: cannot stat 'Gadget2': No such file or directory

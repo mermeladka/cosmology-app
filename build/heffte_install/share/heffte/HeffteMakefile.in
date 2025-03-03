@@ -1,0 +1,4 @@
+heffte_include = -I/cluster/scratch/ebobrova/cosmology-app/build/heffte_install/include/ 
+heffte_link = -L/cluster/scratch/ebobrova/cosmology-app/build/heffte_install/lib/
+heffte_libs = -lheffte 
+heffte_fortran_libs =  $(heffte_libs) -lstdc++
